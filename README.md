@@ -56,9 +56,9 @@ The following new features have been added:
 
 Todo ...
 
-But TL;DR is that i expose map_redis port like 64379:6379 to the internal network so that i can reach it directly from this nodejs solution. So i piggyback on map_data and map_redis that both works really well.
+But TL;DR is that i expose map_redis port like `64379:6379` to the internal network so that i can reach it directly from this nodejs solution. So i piggyback on `map_data` and `map_redis` that both works really well.
 
-So in essence this is replacing map_web.
+So in essence this is replacing `map_web`.
 
 ## Security
 
@@ -70,7 +70,7 @@ Even better you should use the HIVE / Sensor distributed solution so that you ca
 
 ## Credits
 
-This version of T-Pot attack map is the one that have been re-vamped by [Marco Ochse (t3chn0m4g3)](https://github.com/t3chn0m4g3) for the purpose of suiting T-Pot CE.
+This version of T-Pot attack map is the one that have been re-vamped by [Marco Ochse (t3chn0m4g3)](https://github.com/t3chn0m4g3) for the purpose of suiting T-Pot CE and their installation process and data collected by the honeypots.
 
 The original attack map was created by [Matthew Clark May](https://github.com/MatthewClarkMay/geoip-attack-map).  
 First T-Pot based fork was released by [Eddie4](https://github.com/eddie4/geoip-attack-map).
