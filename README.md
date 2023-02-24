@@ -22,7 +22,7 @@
 
 We all know this - Especially if you work in a SOC or with security in general. A lot of times to help outsiders or the un-initiated to understand how much noise, filth and unwanted traffic and attacks are going on in the universe at all times. It can be a very good and healty experience for them to see what a "live" attack map like this looks like in action.
 
-This is also why i needed a more reliable and customizable version of this attack map. Simply as i needed to be able to showcase this "separately" from my t-pot installation/host but also as something that needed to run 24/7 on a remote monitor that i would not have to mico-mangage or hear about breaking :)
+This is also why i needed a more reliable and customizable version of this attack map. Simply as i needed to be able to showcase this "separately" from my t-pot installation/host but also as something that needed to run 24/7 on a remote monitor that i would not have to micromanage or hear about breaking :)
 
 ## What changes have i made ?
 
