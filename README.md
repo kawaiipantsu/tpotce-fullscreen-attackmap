@@ -12,6 +12,7 @@
   - [Table of Contents](#table-of-contents)
   - [Why the need?](#why-the-need)
   - [What changes have i made ?](#what-changes-have-i-made-)
+    - [Things removed](#things-removed)
     - [New features](#new-features)
   - [Installation](#installation)
   - [Security](#security)
@@ -44,16 +45,17 @@ The following new features have been added:
 
 - Pause or Resume attack animations
 - Enable or Disable sound effects :)
-- Abillity to select what sensors you want to show
+- Ability to select what sensors you want to show
 - Enable or Disable showing statistical information
 - Enable or Disable anonymization of Source-IP addresses
 - Auto hide menu after 5sec and mouse cursor
 - Automatic map zoom level based on monitor resolution
-- Locked map so it wont move, zoom, change for optimal display experience
-- New icons for "Sensors" - Changeable by menu
+- New markers for "Sensors" - Changeable by menu
 - Refresh button (Duuurh, just use F5...)
 - Over 500 known services vs port added and colors added
 - Adjusted max "circles" allowed on screen for better longevity
+- Data usage saving, when not visible or minimized - Pause websocket
+- Connection status indicator
 - Error handling for websocket to be better at surviving disconnects
 - Error handling for redis for be better at surviving disconnects
 - Making sure there are no "mem" leaks or buildups so we can run 24/7
