@@ -32,6 +32,12 @@ This is what it looks like, so far ... Still missing the Top10 lists :)
 
 ![Screenshot 1](.github/screenshot1.png "T-Pot Web Attackmap 'Dashboard' Edition")
 
+Here is the menu i'm talking about, still needs some micro adjustments on style/layout but you get the idea. Connection status, Sound and Pause on right side etc.
+
+![Screenshot 2](.github/screenshot2.png "T-Pot Web Attackmap 'Dashboard' Edition")
+
+The menu goes away after 5 sec
+
 ## What changes have i made ?
 
 I removed a lot of the functionality that was not needed on the fullscreen setup, as usually there are no peripherals connected to it anyway. Only the first time when you're doing the setup etc. Then i added some cool options that you can enable/disable etc on setup.
