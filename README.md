@@ -11,6 +11,7 @@
 - [ᵔᴥᵔ T-Pot CE - Fullscreen Optimized Attack Map](#ᵔᴥᵔ-t-pot-ce---fullscreen-optimized-attack-map)
   - [Table of Contents](#table-of-contents)
   - [Why the need?](#why-the-need)
+    - [Screenshot](#screenshot)
   - [What changes have i made ?](#what-changes-have-i-made-)
     - [Things removed](#things-removed)
     - [New features](#new-features)
@@ -24,6 +25,12 @@
 We all know this - Especially if you work in a SOC or with security in general. A lot of times to help outsiders or the un-initiated to understand how much noise, filth and unwanted traffic and attacks are going on in the universe at all times. It can be a very good and healty experience for them to see what a "live" attack map like this looks like in action.
 
 This is also why i needed a more reliable and customizable version of this attack map. Simply as i needed to be able to showcase this "separately" from my [T-Pot CE](https://github.com/telekom-security/tpotce) installation/host but also as something that needed to run 24/7 on a remote monitor that i would not have to micromanage or hear about breaking :)
+
+### Screenshot
+
+This is what it looks like, so far ... Still missing the Top10 lists :)
+
+![Screenshot 1](.github/screenshot1.png "T-Pot Web Attackmap 'Dashboard' Edition")
 
 ## What changes have i made ?
 
