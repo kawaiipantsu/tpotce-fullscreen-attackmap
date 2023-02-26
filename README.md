@@ -4,7 +4,7 @@
 
 > The Web Attackmap currently included in [T-Pot CE](https://github.com/telekom-security/tpotce) is not half bad, but it's really not optimized for running 24/7 on a dashboard monitor or big screen tv etc. This is just that. It has been scraped, tuned, optimized for running on big screen TV 24/7 - Perhaps not something most poeple need, but it did! Need that "bling bling" on a Big TV! ʘ‿ʘ
 
-[![T-Pot Web Attackmap](tpot-attackmap-dashboard.png "T-Pot Web Attackmap 'Dashboard' Edition")](https://github.com/telekom-security/tpotce)
+[![T-Pot Web Attackmap](.github/tpot-attackmap-dashboard.png "T-Pot Web Attackmap 'Dashboard' Edition")](https://github.com/telekom-security/tpotce)
 
 ## Table of Contents
 
