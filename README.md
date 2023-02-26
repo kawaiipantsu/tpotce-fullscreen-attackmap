@@ -77,6 +77,9 @@ The following new features have been added:
 
 ## Installation
 
+SORRY NO CODE HERE YET :)  
+Give me a few more days, only missing the top10 lists.
+
 Todo ...
 
 But TL;DR is that i expose map_redis port like `64379:6379` to the internal network so that i can reach it directly from this nodejs solution. So i piggyback on `map_data` and `map_redis` that both works really well.
