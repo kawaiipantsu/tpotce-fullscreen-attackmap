@@ -8,7 +8,7 @@ var saveDataUsage = false;
 
 // Check if the user have remembered to set the websocket FQDN :)
 if (typeof wssWebSocket !== 'undefined') {
-    const wssWebSocket = 'wss://FOLLOW-THE-INSTALLATION-INSTRUCTIONS/'
+    alert("I'm sorry, but you really need to follow the installation instructions :)")
 }
 
 function openWebsocket() {
