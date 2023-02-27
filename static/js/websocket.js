@@ -6,6 +6,11 @@ var wsTicks = 0;
 var wsLastSeen = 0;
 var saveDataUsage = false;
 
+// Check if the user have remembered to set the websocket FQDN :)
+if (typeof wssWebSocket !== 'undefined') {
+    const wssWebSocket = 'wss://FOLLOW-THE-INSTALLATION-INSTRUCTIONS/'
+}
+
 function openWebsocket() {
   if ("WebSocket" in window) {
    try {

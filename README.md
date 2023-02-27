@@ -178,21 +178,22 @@ apt-get install -y nodejs
 
 ### Configuaration
 
-Move the `.env.example` file to `.env` and edit it with your Hive IP and Certificate files. Also don't forget to install needed npm apps.
+Move the `.env.example` file to `.env` and edit it with your Hive IP and Certificate files.
 
 ```bash
 sudo su -
 cd /opt/tpotce-fullscreen-attackmap
-mv .env.example .env
+cp .env.example .env
 nano .env
 ```
 
-Also edit the file `static/js/websocket-fqdn.js` and change the hostname/fqdn to what ever you created the certificate for this host.
+Set the WebSocket Host/FQDN so clients can open a websocket back to the server
 
 ```bash
 sudo su -
 cd /opt/tpotce-fullscreen-attackmap
-nano static/js/websocket.js
+cp static/js/websocket-fqdn.example.js static/js/websocket-fqdn.js
+nano static/js/websocket-fqdn.js
 ```
 
 Download needed NodeJS modules/Extensions
