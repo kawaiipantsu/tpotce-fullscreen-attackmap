@@ -15,7 +15,13 @@
   - [What changes have i made ?](#what-changes-have-i-made-)
     - [Things removed](#things-removed)
     - [New features](#new-features)
+    - [Still on the drawing board](#still-on-the-drawing-board)
   - [Installation](#installation)
+    - [Prepare T-Pot map redis](#prepare-t-pot-map-redis)
+    - [SSL/TLS Certificate files](#ssltls-certificate-files)
+    - [Download files](#download-files)
+    - [Configuaration](#configuaration)
+    - [Start the attackmap](#start-the-attackmap)
   - [Security](#security)
   - [Credits](#credits)
   - [Licenses / Copyright](#licenses--copyright)
@@ -65,7 +71,6 @@ The following new features have been added:
 - Automatic map zoom level based on monitor resolution
 - New markers for "Sensors" - Changeable by menu
 - Refresh button (Duuurh, just use F5...)
-- Over 500 known services vs port added and colors added
 - Adjusted max "circles" allowed on screen for better longevity
 - Data usage saving, when not visible or minimized - Pause websocket
 - Connection status indicator
@@ -73,18 +78,140 @@ The following new features have been added:
 - Error handling for redis for be better at surviving disconnects
 - Making sure there are no "mem" leaks or buildups so we can run 24/7
 
-> The sound feature is a bit of a novelty! I highly doubt that it will make much sense unless it's some event/forum where you need to be extra flashy with the attackmap :D None the less i have included it.
+> The sound feature is a bit of a novelty! I highly doubt that it will make much sense unless it's some event/forum where you need to be extra flashy with the attackmap :D None the less i have included it and it's kinda fun to use !
+
+### Still on the drawing board
+
+This is my todo list
+
+- Add a `systemd` service template file for easy implementation
+- Over 500 known services vs port added and colors added
+- Fix styling issues on menus
+- Make IP addresses change color based on IP reputation
+- Make Protocol name in Event log be the color of the animation
+- Even more new cool features ???
 
 ## Installation
 
-SORRY NO CODE HERE YET :)  
-Give me a few more days, only missing the top10 lists.
+Please note that my installation is T-Pot as distributed (hive+sensors) but I also do not use the ISO. All my servers are already populated with Debian 11 so users/info might vary in your case. I have tried to make it fit standard T-Pot settings.
 
-Todo ...
+### Prepare T-Pot map redis
 
-But TL;DR is that i expose map_redis port like `64379:6379` to the internal network so that i can reach it directly from this nodejs solution. So i piggyback on `map_data` and `map_redis` that both works really well.
+First make sure your T-Pot Hive / Standalone installation is running with an exposed `map_redis` port. This is done by adding the following to `tpot.yml` on your T-pot CE Standalone / Hive host
 
-So in essence this is replacing `map_web`.
+```bash
+ssh -i key.pem tsec@hive.ip -p 64295
+sudo su -
+nano /opt/tpot/etc/tpot.yml
+```
+> In nano hit `Ctrl^w` and search for `map_redis`  
+> Here you need to add the below lines right after `tty: true`
+
+```yaml
+ports:
+ - "64379:6379"
+```
+> Now save and restart your installation (Standalone or Hive)  
+> Next lest check to see if the port is forwarded correctly!
+
+```bash
+ssh -i key.pem tsec@hive.ip -p 64295
+sudo /opt/tpot/bin/dps.sh | grep map_redis
+map_redis       Up 2 min             0.0.0.0:64379->6379/tcp
+```
+
+Now you can reach `map_redis` on your T-Pot Hive/Standalone IP. Please be aware that any of the ports above 64000+ should be restricted!! See [Security](#security) section.
+
+> **WARNING**  
+> Now you can reach `map_redis` on your T-Pot Hive/Standalone IP. Please be aware that any of the ports above 64000+ should be restricted!! See [Security](#security) section.
+
+That's why you really should run a distributed solution in order to protect yourself better and have better segmentation on what is management part and what is sensors etc.
+
+
+### SSL/TLS Certificate files
+
+On the server that is going to host the fullscreen t-pot attackmap.
+
+```bash
+sudo su -
+apt install certbot
+```
+
+Install what ever plugin flavor you use!!  
+Here is AWS Route53 etc.
+
+```bash
+apt install python3-certbot-dns-route53
+mkdir /root/.aws && chmod 700 /root/.aws
+
+cat <<EOF>/root/.aws/credentials
+[default]
+aws_access_key_id=XXXXXXXXXXXXX
+aws_secret_access_key=XXXxxXXXXxXxXxXxXxXX
+EOF
+```
+
+Finally generate your SSL / TLS certificate files
+
+```bash
+certbot certonly --dns-route53 -d mydomain.tld
+```
+
+### Download files
+
+On the server that is going to host the fullscreen t-pot attackmap.
+
+```bash
+sudo su -
+cd /opt
+git clone https://github.com/kawaiipantsu/tpotce-fullscreen-attackmap.git
+```
+
+Also let's install NodeJS from NodeSource to get 19.x version.
+The old outdated NodeJS in Debian 11 is meh!
+
+```bash
+sudo su -
+curl -fsSL https://deb.nodesource.com/setup_19.x | bash - &&\
+apt-get install -y nodejs
+```
+
+### Configuaration
+
+Move the `.env.example` file to `.env` and edit it with your Hive IP and Certificate files. Also don't forget to install needed npm apps.
+
+```bash
+sudo su -
+cd /opt/tpotce-fullscreen-attackmap
+mv .env.example .env
+nano .env
+```
+
+Also edit the file `static/js/websocket.js` and change the hostname/ip to the ip of this host.
+
+```bash
+sudo su -
+cd /opt/tpotce-fullscreen-attackmap
+nano static/js/websocket.js
+```
+
+### Start the attackmap
+
+You can just start it from command line directly in your ssh/shell like this
+
+```bash
+sudo su -
+cd /opt/tpotce-fullscreen-attackmap
+node main.js
+
+[27-02-2023 16:58:38] info: WebSocket initialized, with zlib compression, concurrency limit = 10
+[27-02-2023 16:58:38] info: Redis client initialized
+[27-02-2023 16:58:38] warn: Web Attack Map - Web Server (https) & Websocket (wss) starting up
+[27-02-2023 16:58:38] warn: Web Attack Map - Now listing for connections on port 443
+```
+
+I will add a `systemd` file in the future, this is todo.  
+For now i just wanted to get it pushed and out there. But you should absolutely run this via systemd!!
 
 ## Security
 
