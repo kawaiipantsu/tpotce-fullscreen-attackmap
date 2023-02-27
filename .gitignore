@@ -112,3 +112,6 @@ dist
 #VCode
 .vscode
 
+# exampel
+static/js/websocket-fqdn.js
+

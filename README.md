@@ -187,7 +187,7 @@ mv .env.example .env
 nano .env
 ```
 
-Also edit the file `static/js/websocket.js` and change the hostname/ip to the ip of this host.
+Also edit the file `static/js/websocket-fqdn.js` and change the hostname/fqdn to what ever you created the certificate for this host.
 
 ```bash
 sudo su -
