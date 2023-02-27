@@ -1,0 +1,442 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+body,div,p,i,table,td,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+body{zoom:100% !important;}
+
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+#menu {
+ z-index: 1000;
+}
+
+#myNavbar {
+ background: rgba(0,0,0,0.6);
+}
+
+#navSensors {
+ background: rgba(0,0,0,0.5);
+ position: relative;
+ left: 438px;
+ width: 200px;
+ z-index: 1000;
+}
+
+#navMarkers {
+ background: rgba(0,0,0,0.5);
+ position: relative;
+ left: 258px;
+ width: 200px;
+ z-index: 1000;
+}
+
+#navMenu {
+ background: rgba(0,0,0,0.5);
+ z-index: 1000;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+#map {
+   position:absolute;
+   top:0;
+   bottom:0;
+}
+
+.leaflet-container {
+        background:black;
+    }
+
+    .leaflet-control-container {
+        background:black;
+        position: relative;
+        top: 40px;
+    }
+
+    .leaflet-control-attribution {
+        font-size: 14px;
+        position: relative;
+        top: 30px;
+        right: 10px;
+        opacity:0.4;
+        color: grey !important;
+        background: black !important;
+    }
+    .leaflet-popup-content-wrapper {
+        background-color: #151515;
+        opacity: 0.9;
+    }
+    .leaflet-popup-tip-container .leaflet-popup-tip {
+        background-color: #151515;
+        opacity: 0.9;
+    }
+    .leaflet-popup-content {
+        font-size: 14px;
+        color: #E20074;
+    }
+    .circle {
+        height:18px;
+        width:18px;
+        border-radius:50%;
+        margin:0 auto;
+        z-index:999;
+    }
+
+
+
+#statsContainer {
+ display: none;
+ position: absolute;
+ z-index: 1000;
+ bottom: 0px;
+ left: 0px;
+ width: 100vw;
+ height: 100px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ border-collapse: collapse;
+ background: rgb(0,0,0);
+ background: linear-gradient(0deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0) 93%);
+}
+
+.statsTable {
+ position: absolute;
+ bottom: 10px;
+ background: rgba(0,0,0,0.5);
+ border: 1px solid black;
+ border-radius: 2px;
+}
+
+#statsTopIP {
+ left: 130px;
+ width: 200px;
+ height: 274px;
+ background: rgba(0,0,0,0.5);
+ background: linear-gradient(180deg, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0.5) 75%);
+ border-bottom-right-radius: 2px;
+ border-bottom-left-radius: 2px;
+ border: 1px solid black;
+}
+
+#statsTopISO {
+ left: 350px;
+ width: 200px;
+ height: 274px;
+ background: rgba(0,0,0,0.5);
+ background: linear-gradient(180deg, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0.5) 75%);
+ border-bottom-right-radius: 2px;
+ border-bottom-left-radius: 2px;
+ border: 1px solid black;
+}
+
+#statsEvents {
+ right: 270px;
+ width: 700px;
+ height: 274px;
+ background: rgba(0,0,0,0.5);
+ background: linear-gradient(180deg, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0.5) 75%);
+ border-bottom-right-radius: 2px;
+ border-bottom-left-radius: 2px;
+ border: 1px solid black;
+}
+
+#counter1 {
+ right: 400px;
+ bottom: 279px;
+ width: 120px;
+ border: 0;
+ height: 30px;
+ padding-right: 4px;
+ text-align: right;
+ background: 0;
+ color: #808080;
+}
+
+#counter2 {
+ right: 270px;
+ bottom: 279px;
+ width: 80px;
+ height: 30px;
+ border: 0;
+ padding-right: 4px;
+ text-align: right;
+ background: 0;
+ color: #808080;
+}
+
+#eventTitle {
+ right: 680px;
+ bottom: 279px;
+ width: 290px;
+ height: 30px;
+ padding-left: 4px;
+ text-align: left;
+ border: 0;
+ background: 0;
+ color: #FFFFF0;
+ font-weight: bold;
+ word-spacing: 6px;
+ text-transform: uppercase;
+}
+
+#ipTitle {
+ left: 130px;
+ bottom: 279px;
+ width: 194px;
+ height: 30px;
+ padding-left: 4px;
+ text-align: left;
+ border: 0;
+ background: 0;
+ color: #FFFFF0;
+ font-weight: bold;
+ word-spacing: 6px;
+ text-transform: uppercase;
+}
+
+#isoTitle {
+ left: 350px;
+ bottom: 279px;
+ width: 194px;
+ height: 30px;
+ padding-left: 4px;
+ text-align: left;
+ border: 0;
+ background: 0;
+ color: #FFFFF0;
+ font-weight: bold;
+ word-spacing: 6px;
+ text-transform: uppercase;
+}
+
+#footer {
+ position: absolute;
+ bottom: 10px;
+ right: 10px;
+ text-align: right;
+}
+
+.footerItem {
+}
+
+.footerText {
+ color: #808080;
+}
+
+.footerIcon {
+ color: #BEBEBE;
+ padding-left: 5px;
+}
+
+
+@media (min-width: 1280px) and (max-width: 1530px) {
+  #statsTopIP { left: 2px; }
+  #statsTopISO { left: 206px; }
+  #statsEvents { right: 170px; }
+
+  #ipTitle { left: 2px; }
+  #isoTitle { left: 206px; }
+  #eventTitle { right: 580px; }
+
+  #counter1 { right: 270px; }
+  #counter2 { right: 170px; }
+
+  #footer { font-size: 11px; }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+ #statsTopIP { left: 2px; }
+ #statsTopISO { left: 206px; }
+ #ipTitle { left: 2px; }
+ #isoTitle { left: 206px; }
+
+ #statsEvents { display: none; }
+ #eventTitle { display: none; }
+ #counter1 { display: none; }
+ #counter2 { display: none; }
+}
+
+#header {
+ display: none;
+ position: absolute;
+ top: 0px;
+ left: 50%;
+ transform: translate(-50%);
+ z-index: 1000;
+ height: 40px;
+ width: 495px;
+ text-align: center;
+ word-spacing: 10px;
+ background: rgb(0,0,0);
+ background: linear-gradient(180deg, rgba(0,0,0,0.5) 2%, rgba(0,0,0,0) 98%);
+ border-bottom-right-radius: 10px;
+ border-bottom-left-radius: 10px;
+}
+
+.headerItem {
+ display: inline-block;
+ width: 150px;
+ background: rgba(0,0,0,0.5);
+ background: linear-gradient(0deg, rgba(0,0,0,0.5) 15%, rgba(0,0,0,0) 85%);
+ border-bottom-right-radius: 2px;
+ border-bottom-left-radius: 2px;
+ border: 1px solid black;
+}
+
+.headerText {
+ color: #808080;
+ float:right;
+ margin-left: 5px;
+ margin-right: 5px;
+}
+
+.headerText2 {
+ color: #BEBEBE;
+ float:left;
+}
+
+.headerIcon {
+ color: #FFFFF0;
+ padding-left: 5px;
+}
+
+.eventLog { 
+ width: 100%;
+ font-size: 14px;
+}
+
+#attackTitle {
+ height: 30px;
+ color: #BEBEBE;
+ width: 100%;
+}
+
+#attackTitle {
+ width: 100%;
+}
+
+.attackList {
+}
+
+.attackItem {
+ height: 20px;
+ font-size: 14px;
+ line-height: normal;
+ display: inline-block;
+ vertical-align: top;
+}
+
+
+.attackItem-0 {
+ float: left;
+ padding-left: 5px;
+ width: 150px;
+}
+
+
+.attackItem-1 {
+ float: left;
+ width: 130px;
+ float: left;
+
+}
+
+.attackItem-2 {
+ float: left;
+ width: 40px;
+ text-align: center;
+ background-size: 20px;
+ background-position: 50%;
+ background-repeat: no-repeat;
+}
+
+
+.attackItem-3 {
+ float: left;
+ width: 170px;
+}
+
+.attackItem-4 {
+ float: right;
+ width: 100px;
+ text-align: center;
+}
+
+.attackItem-5 {
+ float: right;
+ width: 90px;
+ text-align: center;
+}
+
+.attackFlag {
+ margin-top: -2px;
+}
+
+#statsTopIP { padding-top: 6px; }
+#statsTopISO { padding-top: 6px; }
+
+.topIPitem {
+  line-height: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topISOitem {
+  line-height: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.ipCount {
+  float: left;
+  width: 52px;
+  text-align: right;
+}
+
+.isoCount {
+  float: left;
+  width: 52px;
+  text-align: right;
+}
+
+.flag {
+  float: left;
+  width: 18px;
+  height: 14px;
+  text-align: center;
+  margin-left: 4px;
+  margin-top: 3px;
+  background-size: 14px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.ipAddr {
+  float: right;
+  width: 120px;
+  text-align: center;
+}
+
+.isoName {
+  float: right;
+  width: 120px;
+  text-align: left;
+  padding-left: 2px;
+}

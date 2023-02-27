@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="20mm"
+   height="20mm"
+   viewBox="0 0 20 20"
+   version="1.1"
+   id="svg1139"
+   sodipodi:docname="Cloud storage icon.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <title
+     id="title207">Cloud storage icon</title>
+  <defs
+     id="defs1133">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5238-1-8-9-8-4">
+      <rect
+         transform="rotate(-90)"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;enable-background:accumulate"
+         id="rect5240-2-3-9-5-1"
+         width="315.35437"
+         height="744.09448"
+         x="-1016.9291"
+         y="1461.6753" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5242-3-9-7-7">
+      <rect
+         transform="rotate(-90)"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;enable-background:accumulate"
+         id="rect5244-3-2-6-6"
+         width="315.35437"
+         height="744.09448"
+         x="-1016.9291"
+         y="1461.6753" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.9717708"
+     inkscape:cx="37.795276"
+     inkscape:cy="37.795276"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="944"
+     inkscape:window-height="1041"
+     inkscape:window-x="960"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata1136">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Cloud storage icon</dc:title>
+        <dc:date>2018-09-30</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>m1981</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Public domain</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Inkscape</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>flat</rdf:li>
+            <rdf:li>IT</rdf:li>
+            <rdf:li>computer</rdf:li>
+            <rdf:li>cloud</rdf:li>
+            <rdf:li>web</rdf:li>
+            <rdf:li>storage</rdf:li>
+            <rdf:li>drive</rdf:li>
+            <rdf:li>network</rdf:li>
+            <rdf:li></rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>A cloud-based storage icon.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-128.88783,-75.588371)">
+    <path
+       inkscape:connector-curvature="0"
+       style="display:inline;opacity:1;vector-effect:none;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.62046319px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none"
+       d="m 139.35683,79.814123 c -1.201,2.11e-4 -2.33559,0.551394 -3.07806,1.49542 -0.33874,-0.125226 -0.69688,-0.18948 -1.05797,-0.190184 -1.69487,-1.87e-4 -3.06909,1.373501 -3.06959,3.068391 -6.1e-4,1.695853 1.37376,3.070995 3.06959,3.070807 h 2.44064 c 0.38696,0.18526 0.80166,0.305538 1.22764,0.356285 v 0.934341 h -0.938 v 0.942808 h -4.20635 v 0.937976 h 4.20635 v 0.933099 h 2.81391 v -0.933099 h 3.13262 v -0.937976 h -3.13262 v -0.942808 h -0.93796 v -0.934341 c 0.42429,-0.05136 0.83733,-0.171658 1.22276,-0.356285 h 2.38854 c 1.20747,2.58e-4 2.18639,-0.978663 2.18613,-2.186157 2.6e-4,-1.207494 -0.97866,-2.186415 -2.18613,-2.186157 -0.0851,5.16e-4 -0.17002,0.007 -0.25451,0.01642 -0.38973,-1.802013 -1.98331,-3.088301 -3.82699,-3.088981 z m 0.001,1.135501 c 0.63713,-0.01172 0.63713,0.949866 0,0.937953 -0.83667,0 -1.56483,0.55878 -1.7814,1.366958 -0.16181,0.605376 -1.06993,0.36135 -0.90646,-0.243582 0.32526,-1.213872 1.43114,-2.061329 2.68786,-2.061329 z M 134.422,82.35293 c 0.0141,-3.05e-4 0.03,1.17e-4 0.0448,0.0012 0.46795,0.02697 0.61121,0.64808 0.20238,0.87738 -0.16814,0.09685 -0.30896,0.235514 -0.40596,0.403538 -0.31266,0.542107 -1.12584,0.07316 -0.81315,-0.468989 0.1794,-0.310579 0.43954,-0.567175 0.75012,-0.746502 0.0673,-0.04034 0.14352,-0.06332 0.22184,-0.0666 z"
+       id="circle4158-2"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

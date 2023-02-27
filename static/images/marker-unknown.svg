@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="20mm"
+   height="20mm"
+   viewBox="0 0 20 20"
+   version="1.1"
+   id="svg1139"
+   sodipodi:docname="ITcons.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <title
+     id="title200">Question icon</title>
+  <defs
+     id="defs1133">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5238-1-8-9-8-4">
+      <rect
+         transform="rotate(-90)"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;enable-background:accumulate"
+         id="rect5240-2-3-9-5-1"
+         width="315.35437"
+         height="744.09448"
+         x="-1016.9291"
+         y="1461.6753" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5242-3-9-7-7">
+      <rect
+         transform="rotate(-90)"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;enable-background:accumulate"
+         id="rect5244-3-2-6-6"
+         width="315.35437"
+         height="744.09448"
+         x="-1016.9291"
+         y="1461.6753" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.9717708"
+     inkscape:cx="37.795276"
+     inkscape:cy="37.795276"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="944"
+     inkscape:window-height="1041"
+     inkscape:window-x="960"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata1136">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Question icon</dc:title>
+        <dc:date>2018-09-3</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>m1981</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Public domain</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Inkscape</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>flat</rdf:li>
+            <rdf:li>IT</rdf:li>
+            <rdf:li>computer</rdf:li>
+            <rdf:li>question</rdf:li>
+            <rdf:li>hole</rdf:li>
+            <rdf:li>unndefined</rdf:li>
+            <rdf:li>random</rdf:li>
+            <rdf:li></rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>A question icon.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-59.905655,-111.19891)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path5949"
+       d="m 70.136419,115.43428 c -0.37732,-0.0265 -0.763082,0.007 -1.142771,0.10904 -1.518495,0.4068 -2.583644,1.79435 -2.583644,3.3665 v 0.46777 h 0.472623 2.344917 v -0.46777 c 0,-0.29428 0.189481,-0.563 0.494432,-0.6447 0.304272,-0.0814 0.603149,0.0485 0.754968,0.31144 0.151491,0.26216 0.118191,0.58348 -0.10412,0.80588 l -0.856767,0.85677 c -0.535259,0.53526 -0.872221,1.22813 -0.97796,1.96804 a 4.8365384,2.4330792 0 0 0 -3.469513,2.33158 4.8365384,2.4330792 0 0 0 3.573728,2.34613 1.4070349,1.4070349 0 0 1 -0.144221,-0.61562 1.4070349,1.4070349 0 0 1 1.40816,-1.40694 1.4070349,1.4070349 0 0 1 1.406941,1.40694 1.4070349,1.4070349 0 0 1 -0.145393,0.61804 4.8365384,2.4330792 0 0 0 3.574924,-2.34855 4.8365384,2.4330792 0 0 0 -3.248938,-2.29037 c 0.007,-0.007 0.0094,-0.0164 0.01407,-0.0211 l 0.851913,-0.85194 c 1.111628,-1.11162 1.340131,-2.84805 0.553833,-4.20994 -0.589689,-1.02151 -1.645575,-1.65092 -2.777558,-1.73051 z m -0.06543,0.93676 c 0.827783,0.0586 1.601534,0.52018 2.032251,1.26637 0.574164,0.99447 0.405226,2.26083 -0.407172,3.07323 l -0.851936,0.85193 c -0.301434,0.30137 -0.471404,0.71337 -0.471404,1.14033 v 0.6641 H 69.43841 v -0.6641 c 0,-0.67664 0.264452,-1.32237 0.741648,-1.79957 l 0.856767,-0.85677 c 0.540208,-0.5402 0.605447,-1.3285 0.250851,-1.9426 -0.362992,-0.62871 -1.106633,-0.93424 -1.808063,-0.74648 -0.652818,0.17495 -0.998362,0.66506 -1.119742,1.08096 h -0.968275 c 0.207304,-0.99956 0.933826,-1.74341 1.844436,-1.98741 0.277303,-0.0743 0.559014,-0.0997 0.834957,-0.08 z m -0.164857,9.19424 a 0.70351747,0.70351747 0 0 0 -0.70408,0.70408 0.70351747,0.70351747 0 0 0 0.70408,0.70286 0.70351747,0.70351747 0 0 0 0.702861,-0.70286 0.70351747,0.70351747 0 0 0 -0.702861,-0.70408 z"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.93802327;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+  </g>
+</svg>

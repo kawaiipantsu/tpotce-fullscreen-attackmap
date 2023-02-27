@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, viewport-fit=cover" />
+
+  <title>T-Pot Attack Map - Fullscreen</title>
+  <meta name="description" content="A simple web attackmap for T-Pot">
+  <meta name="author" content="KawaiiPantsu">
+
+  <meta property="og:title" content="T-Pot Attack Map">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://attackmap.sec.nuuday.dk/">
+  <meta property="og:description" content="A simple web attackmap for T-Pot">
+  <meta property="og:image" content="logo.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js" integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SoundJS/1.0.2/soundjs.min.js" integrity="sha512-tWGC9KCH7gq1wgk/ZwaX1kd7bQq8M8ekETvWy0Mk8d9+d9XWHR4F3CuzbPJnUnu/eyEX/rPyYguXHtvN6WzcRQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js" integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/2.4.0/Control.FullScreen.min.js" integrity="sha512-kes6Ba0XFyifhkOEm6ajqatjezt4S4pfAA1CA3MZwa6TtHYHhqotqNA/DukHbDV9fy53mRX0m1TrlJ4s4G4RYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+   <div id="header">
+    <div class="headerItem"><div class="headerText2"><i class="headerIcon fa fa-fw fa-clock-o" aria-hidden="true"></i> 1M&#8786;</div><div id="last_1m" class="headerText">-</div></div>
+    <div class="headerItem"><div class="headerText2"><i class="headerIcon fa fa-fw fa-clock-o" aria-hidden="true"></i> 1H&#8786;</div><div id="last_1h" class="headerText">-</div></div>
+    <div class="headerItem"><div class="headerText2"><i class="headerIcon fa fa-fw fa-clock-o" aria-hidden="true"></i> 24H&#8786;</div><div id="last_24h" class="headerText">-</div></div>
+   </div>
+
+  <div id="statsContainer" class="w3-hide-small">
+   <div id="statsTopIP" class="statsTable"></div>
+   <div id="statsTopISO" class="statsTable"></div>
+   <div id="counter1" class="statsTable">0</div>
+   <div id="counter2" class="statsTable">-/sec</div>
+   <div id="eventTitle" class="statsTable"><i class="fa fa-history" aria-hidden="true"></i> Live threatactor attack log</div>
+   <div id="ipTitle" class="statsTable"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> Top10 IP Sources</div>
+   <div id="isoTitle" class="statsTable"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> Top10 Countries</div>
+   <div id="statsEvents" class="statsTable">
+    <div id="attackTitle" class="eventLog">
+     <div class="attackList attackItem-0">Timestamp</div>
+     <div class="attackList attackItem-1">IP Source Address</div>
+     <div class="attackList attackItem-2">Flag</div>
+     <div class="attackList attackItem-3">Country</div>
+     <div class="attackList attackItem-4">Honeypot</div>
+     <div class="attackList attackItem-5">Protocol</div>
+    </div>
+    <div id="attackLog" class="eventLog">
+    </div>
+   </div>
+
+   <div id="footer">
+    <div class="footerItem"><span id="hiveTime" class="footerText">- </span> <i class="footerIcon fa fa-clock-o" aria-hidden="true"></i></div>
+    <div class="footerItem"><span id="hiveSensors" class="footerText">- </span> <i class="footerIcon fa fa-sitemap" aria-hidden="true"></i></div>
+   </div>
+  </div>
+
+  <div id="menu" class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction('navMenu')" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="/" class="w3-bar-item w3-button"><i class="fa fa-fw fa-refresh"></i> RELOAD</a>
+      <a id="statsStatus" href="javascript:void(0);" onclick="toggleStats()" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-fw fa-pie-chart"></i> TOGGLE STATS</a>
+      <a href="javascript:void(0);" onclick="toggleFunction('navMarkers')" onmouseenter="toggleFunction('navMarkers')" onmouseleave="toggleFunction('navMarkers')" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-fw fa-font-awesome"></i> CHOOSE MARKER</a>
+      <a href="javascript:void(0);" onclick="toggleFunction('navSensors')" onmouseenter="toggleFunction('navSensors')" onmouseleave="toggleFunction('navSensors')" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-fw fa-bullseye"></i> SELECT SENSORS</a>
+      <a href="javascript:void(0);" onclick="togglePause()" class="w3-bar-item w3-button w3-hide-small w3-right"><i id="syspause" class="fa fa-fw fa-pause"></i></a>
+      <a href="javascript:void(0);" onclick="toggleSound()" class="w3-bar-item w3-button w3-hide-small w3-right"><i class="fa fa-fw fa-volume-off" id="syssound"></i></a>
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-small w3-right"><i id="connStatus" class="fa fa-fw fa-plug"></i></a>
+    </div>
+
+   <div id="navMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+    <a href="javascript:void(0);" onclick="toggleFunction('navMarkers');togglePause()" class="w3-bar-item w3-button"><i id="syspause" class="fa fa-fw fa-pause"></i></a>
+   </div>
+
+   <div id="navSensors" class="w3-bar-block w3-hide w3-hide-small" onmouseleave="toggleFunction('navSensors')">
+    <a href="javascript:void(0);" onclick="toggleFunction('navSensors');toggleSensor('all');" class="w3-bar-item w3-button sensorOption sensorAll"><i class="fa fa-bullseye"></i> Show all sensors!</a>
+   </div>
+
+   <div id="navMarkers" class="w3-bar-block w3-hide w3-hide-small" onmouseleave="toggleFunction('navMarkers')">
+   </div>
+ </div>
+
+ <div id="map"></div>
+
+ <script src="js/map.js"></script>
+ <script src="js/websocket.js"></script>
+ <script src="js/sound.js"></script>
+ <script src="js/scripts.js"></script>
+</body>
+</html>
