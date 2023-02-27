@@ -6,12 +6,15 @@ var wsTicks = 0;
 var wsLastSeen = 0;
 var saveDataUsage = false;
 
-// Check if the user have remembered to set the websocket FQDN :)
-if (typeof wssWebSocket !== 'undefined') {
-    alert("I'm sorry, but you really need to follow the installation instructions :)")
-}
 
-function openWebsocket() {
+
+function openWebsocket() { 
+    // Check if the user have remembered to set the websocket FQDN :)
+    if (typeof wssWebSocket == 'undefined') {
+        alert("I'm sorry, but you really need to follow the installation instructions :)")
+        return;
+    }
+
   if ("WebSocket" in window) {
    try {
     ws = new WebSocket(wssWebSocket);
