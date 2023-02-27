@@ -195,6 +195,14 @@ cd /opt/tpotce-fullscreen-attackmap
 nano static/js/websocket.js
 ```
 
+Download needed NodeJS modules/Extensions
+
+```bash
+sudo su -
+cd /opt/tpotce-fullscreen-attackmap
+npm install
+```
+
 ### Start the attackmap
 
 You can just start it from command line directly in your ssh/shell like this
