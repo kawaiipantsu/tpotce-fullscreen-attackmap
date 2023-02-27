@@ -28,7 +28,7 @@ This is also why i needed a more reliable and customizable version of this attac
 
 ### Screenshot
 
-This is what it looks like, so far ... Still missing the Top10 lists :)
+This is what it looks like :)
 
 ![Screenshot 1](.github/screenshot1.png "T-Pot Web Attackmap 'Dashboard' Edition")
 
