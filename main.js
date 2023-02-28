@@ -51,17 +51,12 @@ const wss = new ws.Server({
 //    ports:
 //     - "64379:6379"
 logger.info("Redis client initialized");
-
-const onRedisError = (err)     => { logger.error(err) };
-const onRedisConnect = ()      => { logger.info('Redis connected') };
-const onRedisReconnecting = () => { logger.warn('Redis reconnecting') };
-const onRedisReady = ()        => { logger.info('Redis ready!') };
-
 const redisClient = redis.createClient({ url: process.env.MAP_REDIS_URL, password: process.env.MAP_REDIS_PASSWORD } );
-redisClient.on('error', onRedisError);
-redisClient.on('connect', onRedisConnect);
-redisClient.on('reconnecting', onRedisReconnecting);
-redisClient.on('ready', onRedisReady);
+
+redisClient.on('error', err => { logger.error(err) });
+redisClient.on('connect', () => { logger.info('Redis connected') });
+redisClient.on('reconnecting', () => { logger.warn('Redis reconnecting') });
+redisClient.on('ready', () => { logger.info('Redis ready!') });
 
 // Overall error handler
 // Will reach Simple 500 handler etc and use status code
