@@ -51,17 +51,7 @@ const wss = new ws.Server({
 //    ports:
 //     - "64379:6379"
 logger.info("Redis client initialized");
-
-const onRedisError = (err)     => { logger.error(err) };
-const onRedisConnect = ()      => { logger.info('Redis connected') };
-const onRedisReconnecting = () => { logger.warn('Redis reconnecting') };
-const onRedisReady = ()        => { logger.info('Redis ready!') };
-
 const redisClient = redis.createClient({ url: process.env.MAP_REDIS_URL, password: process.env.MAP_REDIS_PASSWORD } );
-redisClient.on('error', onRedisError);
-redisClient.on('connect', onRedisConnect);
-redisClient.on('reconnecting', onRedisReconnecting);
-redisClient.on('ready', onRedisReady);
 
 // Overall error handler
 // Will reach Simple 500 handler etc and use status code
@@ -107,6 +97,10 @@ wss.on('connection', (ws,req) => {
 // We make sure to send it to all connected websockets!!
 (async () => {
   const subscriber = await redisClient.duplicate();
+  subscriber.on('error', err => { logger.error("[Redis-Subscibe handler] "+err) });
+  subscriber.on('connect', () => { logger.info('[Redis-Subscibe handler] Connected to remote redis server') });
+  subscriber.on('reconnecting', () => { logger.warn('[Redis-Subscibe handler] Trying to re-connect to remote redis server') });
+  subscriber.on('ready', () => { logger.info('[Redis-Subscibe handler] Connection ready, subscribing to channel!') });
   await subscriber.connect();
   await subscriber.subscribe('attack-map-production', (message) => {
     wss.clients.forEach( (client) => {
