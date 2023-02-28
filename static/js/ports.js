@@ -12,8 +12,8 @@
 // So i have removed some of the duplicate entries and kept the ones with best descriptive info
 // That is all
 //
-// I have included a single Object method for making it easy to implement, just use that to get
-// protocol name and if not found, returns port number again. (See examples)
+// I have included a two Object method for making it easy to implement, just use those to get
+// protocol name/color and if not found, returns port number or default color again. (See examples)
 //
 
 // EXAMPLE ON HOW TO USE THIS ...
@@ -21,6 +21,9 @@
  * - T-Pot Attack Map implementation method
  *   Code..........: knownPorts.lookFor(123)
  *   Output string.: NTP (or port number if not found)
+ * 
+ *   Code..........: knownPorts.whatColor(123)
+ *   Output string.: #DABEEF (or #FFFFFF if not found)
  *
  * - Fetch protocol name directly from port number
  *   Code..........: knownPorts[22].portProtName
@@ -370,5 +373,10 @@ const knownPorts = {
     lookFor(port) {
         const p = this[port]
         return p ? p.portProtName : port
+    },
+
+    whatColor(port) {
+        const p = this[port]
+        return p ? p.color : '#FFFFFF'
     }
 }
