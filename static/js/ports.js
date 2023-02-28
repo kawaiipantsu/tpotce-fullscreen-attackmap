@@ -324,3 +324,16 @@ const knownPorts = {
         else return "Port "+port+" is a "+p.portProtType+" protocol known as "+p.portProtName;
     }
 }
+
+/**************************
+ * EXAMPLE ON HOW TO USE THIS ...
+ * 
+ * - Fetch protocol name directly from port number
+ *   Code..........: knownPorts[22].portProtName
+ *   Output string.: SSH
+ * 
+ * - Show human readable info about port
+ *   Code..........: knownPorts.portShowInfo(9667)
+ *   Output string.: Port 9667 is a TCP protocol known as XMMS2 it is Cross-platform Music Multiplexing System
+ * 
+ **************************************************************/
