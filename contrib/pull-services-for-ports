@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cat /etc/services | \
+ grep -e "^[a-z]" | \
+ awk 'BEGIN{FS=OFS=" "} \
+ {gsub(/\/tcp/," %TCP%", $0)} \
+ {gsub(/\/udp/," %UDP%", $0)} \
+ {gsub(/\/sctp/," %SCTP%", $0)} \
+ {gsub(/\/ddp/," %DDP%", $0)} \
+ {split($0,p,"%")} \
+ {split($0,d,"# ")} \
+ {print $2" : { \"color\":\"#FFFFFF\", \"portProtName\":\""toupper($1)"\", \"portProtType\":\""p[2]"\", \"portProtDesc\":\""d[2]"\" },"} \
+ ' | \
+ sort -h
