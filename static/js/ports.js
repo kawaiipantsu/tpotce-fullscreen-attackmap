@@ -374,7 +374,6 @@ const knownPorts = {
 
     lookFor(port) {
         const p = this[port]
-        console.log("PORT="+port);
         return p ? p.portProtName : port
     },
 
