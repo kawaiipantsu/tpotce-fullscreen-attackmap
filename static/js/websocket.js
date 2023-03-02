@@ -257,7 +257,7 @@ function handleLegend(msg) {
               msg.iso_code,
               msg.country,
               msg.honeypot,
-              msg.protocol];
+              knownPorts.lookFor(msg.protocol)];
     top10ip('statsTopIP', ipCountList, msg.ip_to_code);
     top10iso('statsTopISO', countryCountList, msg.country_to_code);
     prependAttackRow('attackLog', attackList);
@@ -281,11 +281,11 @@ const messageHandlers = {
          var srcPoint = map.latLngToLayerPoint(srcLatLng);
          updateTrafficTrigger();
          Promise.all([
-            addCircle(msg.country, msg.iso_code, msg.src_ip, msg.ip_rep, msg.color, srcLatLng),
+            addCircle(msg.country, msg.iso_code, msg.src_ip, msg.ip_rep, knownPorts.whatColor(msg.color), srcLatLng),
             addMarker(msg.dst_country_name, msg.dst_iso_code, msg.dst_ip, msg.tpot_hostname, dstLatLng),
             handleLegend(msg),
-            handleParticle(msg.color, srcPoint),
-            handleTraffic(msg.color, srcPoint, dstPoint, srcLatLng)
+            handleParticle(knownPorts.whatColor(msg.color), srcPoint),
+            handleTraffic(knownPorts.whatColor(msg.color), srcPoint, dstPoint, srcLatLng)
          ]).then(() => {
             // All operations have completed
          });
